@@ -28,8 +28,13 @@ Launch (https://localhost:7264/swagger/index.html) in your browser to view Catal
 Launch http://localhost:15672/ in your browser to view RabbitMq dashboard
 
 Technologies
+
 .NET Core 6.0
+
 Entity Framework Core 6.0
+
 RabbitMq
+
 CQRS
+
 Ocelot gateway
