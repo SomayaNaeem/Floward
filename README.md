@@ -1,33 +1,25 @@
 Use these instructions to get the project up and running.
 
-Prerequisites
-You will need the following tools:
+* Prerequisites
+  => You will need the following tools:
+    - Visual Studio Code or Visual Studio 2022
+    - .NET Core SDK 6.0
+* Setup sln
+  - Clone the repository
+  - change the connectionstring with your server name, user Id and password in Services.Catalog.Catalog.API => appsettings.Development.json
 
-Visual Studio Code or Visual Studio 2022
-.NET Core SDK 6.0
-Setup
-Follow these steps to get your development environment set up:
+  => Setup database
+    - Set the Catalog.API as a startup project
+    - In Package manager console select Catalog.Infrastructure as default project
+    - Write this command => update-database 
+ => Launch Services
+  - https://localhost:7247/swagger/index.html to view the API Gateway
 
-Clone the repository
+  - https://localhost:7264/swagger/index.html  to view Catalog APIs
 
-At the root directory, restore required packages by running:
+  - http://localhost:15672/  to view RabbitMq dashboard
 
-dotnet restore
-Next, build the solution by running:
-
-dotnet build
-change the connectionstring with your server name, user Id and password in the following
-
-Services.Catalog.Catalog.API
-appsettings.Development.json
-dotnet run
-Launch (https://localhost:7247/swagger/index.html) in your browser to view the API Gateway
-
-Launch (https://localhost:7264/swagger/index.html) in your browser to view Catalog APIs
-
-Launch http://localhost:15672/ in your browser to view RabbitMq dashboard
-
-Technologies
+* Technologies
 
 .NET Core 6.0
 
